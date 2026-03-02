@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Milad - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Joseph</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p>Hi, I'm</p>
+            <h1 class="gradient-text">Joseph Milad</h1>
+            <h2>Data Analyst Specialist</h2>
+            <p class="bio">I analyze complex datasets and build data-driven insights using Python, SQL, Excel, and Power BI. I turn data into actionable solutions and I'm open to employment or freelance opportunities.</p>
+            
+            <div class="tech-badges">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Excel</span>
+                <span>Power BI</span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#" class="icon-btn"><i class="fab fa-github"></i></a>
+                <a href="#" class="icon-btn"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="avatar-glow"></div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">I'm a passionate Data Analyst Specialist and BIS student with a strong interest in building data-driven insights and analytical solutions. I have hands-on experience analyzing datasets and creating visualizations using Python, SQL, Excel, and Power BI.</p>
+        
+        <div class="about-cards">
+            <div class="card">
+                <h3>2+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="card">
+                <h3>BIS</h3>
+                <p>Business Information Systems</p>
+            </div>
+            <div class="card">
+                <h3>Open</h3>
+                <p>To Work & Freelance</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-container">
+            <div class="tech-badges">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Excel</span>
+                <span>Power BI</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-card"></div>
+    </section>
+
+    <footer id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-links">
+            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <p class="copyright">&copy; 2026 Joseph Milad. Data Analyst Specialist.</p>
+    </footer>
+
+    <script>
+        // Fixed navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
