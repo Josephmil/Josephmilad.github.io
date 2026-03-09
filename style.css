@@ -29,6 +29,17 @@ body {
     background-size: 50px 50px;
 }
 
+/* Interactive Background */
+#interactive-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* Navigation */
 nav {
     position: fixed;
@@ -126,7 +137,7 @@ nav.scrolled {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 100px 10%;
 }
@@ -195,14 +206,6 @@ nav.scrolled {
     color: var(--primary-color);
 }
 
-.avatar-glow {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: url('YOUR_IMAGE_URL_HERE') center/cover;
-    box-shadow: 0 0 50px rgba(135, 206, 235, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
 /* Cards (About & Skills) */
 .about-cards, .skills-container {
     display: flex;
@@ -226,6 +229,58 @@ nav.scrolled {
     margin-bottom: 10px;
 }
 
+/* About Highlights Section */
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+.highlight-item {
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.05), rgba(176, 224, 230, 0.05));
+    border: 1px solid rgba(135, 206, 235, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #87ceeb, #b0e0e6);
+}
+
+.highlight-item:hover {
+    border-color: rgba(135, 206, 235, 0.5);
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(176, 224, 230, 0.1));
+    box-shadow: 0 8px 25px rgba(135, 206, 235, 0.15);
+    transform: translateY(-5px);
+}
+
+.highlight-item h4 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Projects */
 .project-card {
     background-color: var(--card-bg);
@@ -237,10 +292,19 @@ nav.scrolled {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.project-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
 .project-type {
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .github-link {
